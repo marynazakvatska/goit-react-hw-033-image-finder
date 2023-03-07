@@ -12,12 +12,14 @@ export default class Searchbar extends Component {
 }
 
   
+
+  
   handleNameChange = e => {
     this.setState({photoName: e.currentTarget.value.toLowerCase()})
   }
   
   
-  handleSubmit = e => {
+  /* handleSubmit = e => {
     e.preventDefault();
 
     if (this.state.photoName.trim() === '') {
@@ -27,8 +29,27 @@ export default class Searchbar extends Component {
 
 this.props.qwe(this.state.photoName)
     this.setState({photoName: ""})
-}
+} */
 
+  
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    const submitValue = e.target[1].value;
+    console.log(e.target[1])
+
+    if (submitValue.trim() === '') {
+      return toast('Write the text pls');
+    }
+
+    this.props.qwe(submitValue);
+
+    this.setState({ photoName: '' });
+  };
+
+  
+  
   render() {
 
     return  (<Searchbarr>
@@ -41,7 +62,7 @@ this.props.qwe(this.state.photoName)
 
     <SearchFormInput
           type="text"
-          value={this.state.photo}
+          value={this.state.photoName}
           onChange= {this.handleNameChange}
       autocomplete="off"
       autoFocus
