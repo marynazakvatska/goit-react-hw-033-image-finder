@@ -37,6 +37,8 @@ export default class ImageGallery extends Component {
   }
 }
 ImageGallery.propTypes = {
-  componentDidUpdate: PropTypes.func,
-  addPage: PropTypes.func,
+  onClick: PropTypes.func,
+  setModalPicture: PropTypes.func,
+   photos: PropTypes.array,
+  
 };

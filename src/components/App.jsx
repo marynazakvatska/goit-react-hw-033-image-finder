@@ -8,6 +8,9 @@ import Loader from './Loader';
 import Modal from './Modal';
 import Button from './Button';
 import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
+
+
 export class App extends Component {
   state = {
     data: [],
@@ -31,7 +34,7 @@ export class App extends Component {
           if (data) {
             if (data.hits.length > 0) {
               const newImages = data.hits;
-              // data.hits = [...(prevState.data?.hits || []), ...data.hits];
+          
               this.setState(prevState => ({
                 data: [...prevState.data, ...newImages],
               }));
@@ -93,3 +96,12 @@ export class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  toggleModal: PropTypes.func,
+  setModalPicture: PropTypes.func,
+  handleFormSubmit: PropTypes.func,
+  componentDidUpdate: PropTypes.func,
+   addPage: PropTypes.func,
+  
+};
