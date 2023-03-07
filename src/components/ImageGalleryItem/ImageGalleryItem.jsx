@@ -5,7 +5,7 @@ import {
 import PropTypes from 'prop-types';
 
 const ImageGalleryItem = ({ photos, setModalPicture }) => {
-  console.log(photos);
+ /*  console.log(photos); */
   
   return photos.map(({ id, webformatURL, tag }) => {
     return (
