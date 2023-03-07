@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { createPortal } from 'react-dom';
-import {Modall, Overlay} from './Modal.styled'
+import { Modall, Overlay } from './Modal.styled'
+import PropTypes from 'prop-types';
 
 
 const modalRoot = document.querySelector('#modal-root')
@@ -25,7 +26,6 @@ export default class Modal extends Component {
 
   
   handleBackdropClick = e => {
-    console.log('clik in backdrop')
     if (e.target === e.currentTarget) {
       this.props.onClose()
     }
@@ -36,7 +36,6 @@ export default class Modal extends Component {
         <Overlay onClick={this.handleBackdropClick}>
              <Modall >
                {this.props.children}
-    {/* <img src="images/sample.gif" alt="" /> */}
   </Modall>
 </Overlay>, modalRoot
     )
@@ -44,3 +43,9 @@ export default class Modal extends Component {
    
 }
 
+ Modal.propTypes = {
+     handleKeyDown: PropTypes.func,
+     componentWillUnmount: PropTypes.func,
+     componentDidMount: PropTypes.func,
+     
+};

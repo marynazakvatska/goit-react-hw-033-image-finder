@@ -1,8 +1,8 @@
 import { Buttonn } from "./Button.styled"
 
-const Button = () => {
+const Button = (props) => {
     return (
-    <Buttonn>Load more</Buttonn>
+    <Buttonn {...props}>Load more</Buttonn>
 )
 }
 

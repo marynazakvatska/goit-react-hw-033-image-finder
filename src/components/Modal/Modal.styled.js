@@ -3,11 +3,9 @@ import styled from 'styled-components';
 
 
 export const Modall = styled.div`
-/* max-width: calc(100vw - 48px);
-  max-height: calc(100vh - 24px); */
-  width: 800px;
-  height: 500px;
-  background-color: white;
+max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 24px);
+
   `
 
 export const Overlay = styled.div`

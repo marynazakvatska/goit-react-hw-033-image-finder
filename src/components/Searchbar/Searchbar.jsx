@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { toast } from 'react-toastify';
 import { ReactComponent as SearchIcon } from '../icons/search.svg';
 import { Searchbarr, SearchForm, SearchFormButton, SearchFormButtonLabel, SearchFormInput } from "./Searchbar.styled"
-
+import PropTypes from 'prop-types';
 
 
 
@@ -53,4 +53,10 @@ this.props.qwe(this.state.photoName)
 
 }
 
-/* export default Searchbar */
+
+ Searchbar.propTypes = {
+     onSubmit: PropTypes.string,
+     handleSubmit: PropTypes.func,
+     handleNameChange: PropTypes.func,
+     
+};
