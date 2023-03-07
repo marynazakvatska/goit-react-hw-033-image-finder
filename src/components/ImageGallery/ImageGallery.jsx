@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { ImageGallerys } from './ImageGallery.styled';
 import ImageGalleryItem from 'components/ImageGalleryItem';
-import { toast } from 'react-toastify';
 import Loader from 'components/Loader';
 import Button from 'components/Button';
 import PropTypes from 'prop-types';

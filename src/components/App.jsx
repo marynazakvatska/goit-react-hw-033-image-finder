@@ -4,9 +4,7 @@ import { Appt } from './App.styled';
 import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
 import fetchImages from 'components/fetchImages';
-import Loader from './Loader';
 import Modal from './Modal';
-import Button from './Button';
 import 'react-toastify/dist/ReactToastify.css';
 import PropTypes from 'prop-types';
 
